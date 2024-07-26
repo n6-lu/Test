@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>一覧表示</h2>
+<button type="button" onclick="history.back()">メニューに戻る</button>
+<table border="1">
+	<tr>
+		<td>曲番号</td>
+		<td>曲名</td>
+		<td>歌手名</td>
+	</tr>
+		<tr th:each="name : ${list}">
+		<td th:text="${name.song_id}" ></td>
+		<td th:text="${name.song_name}"></td>
+		<td th:text="${name.singer}"></td>
+	</tr>
+</table>
+</body>
+</html>

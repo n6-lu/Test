@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>楽曲操作システム⭐更新入力︎</h2>
+	<form th:action="@{/update}" method="post">
+			<input type="hidden" name="song_id">
+			<br />
+		<input type="submit" value="更新">
+	</form>
+	<button type="button" onclick="history.back()">メニューに戻る</button>
+</body>
+</html>
+<font  size="3" color="red">登録してよろしいですか？</font>
+	<p>氏名:[[${memberForm.name}]]</p>
+	<form th:action="@{/insert}" method="post">
+		<input type="hidden" th:value="${memberForm.name}" name="name">
+		<input type="submit" value="登録">
+		<button type="button" onclick="history.back()">戻る</button>
+	</form>
+</body>
